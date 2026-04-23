@@ -14,7 +14,7 @@ countries_guessed=[]
 
 done=False
 total=0
-if (user_input=="Asia" or user_input=="asia") and (user_input_2=="countries" or user_input_2=="Countries"): #for if the user picks asia countries
+if (user_input.lower()=="asia") and (user_input_2.lower()=="countries"): #for if the user picks asia countries
     while not done:
         remaining=int(end_time-time.time()) 
         if remaining<=0: #when the timer hits zero the code stops
@@ -36,7 +36,7 @@ if (user_input=="Asia" or user_input=="asia") and (user_input_2=="countries" or 
         new_file.write(str(countries_guessed)+'\n')
         new_file.close()
 
-if (user_input=="Asia" or user_input=="asia") and (user_input_2=="capitals" or user_input_2=="Capitals"): #for if the user picks asia capital
+if (user_input.lower()=="asia") and (user_input_2.lower()=="capitals"): #for if the user picks asia capital
     while not done:
         remaining=int(end_time-time.time())
         if remaining<=0:
@@ -58,7 +58,7 @@ if (user_input=="Asia" or user_input=="asia") and (user_input_2=="capitals" or u
         new_file.write(str(countries_guessed)+'\n')
         new_file.close()
 
-if (user_input=="Europe" or user_input=="europe") and (user_input_2=="countries" or user_input_2=="Countries"): #for if the user picks europe countries
+if (user_input.lower()=="europe") and (user_input_2.lower()=="countries"): #for if the user picks europe countries
     while not done:
         remaining=int(end_time-time.time())
         if remaining<=0:
@@ -79,7 +79,7 @@ if (user_input=="Europe" or user_input=="europe") and (user_input_2=="countries"
         new_file=open("Countriesguessed.csv","w")
         new_file.write(str(countries_guessed)+'\n')
         new_file.close()
-if (user_input=="Europe" or user_input=="europe") and (user_input_2=="capitals" or user_input_2=="Capitals"): #for if the user picks europe countries
+if (user_input.lower()=="europe") and (user_input_2.lower()=="capitals"): #for if the user picks europe countries
     while not done:
         remaining=int(end_time-time.time())
         if remaining<=0:
