@@ -1,5 +1,7 @@
 import State_capitals
 State_capitals.States_Capitals
+
+#this was my attempt at doing a class for this game, didn't work
 class Closeness:
     def __int__(self, close_input):
         self._close_input = close_input
@@ -11,7 +13,7 @@ class Closeness:
                     score+=1
 
 
-
+#this is for creating a csv file that will be used later
 var = open("contriesguess.csv","w")
 
 correct = []
@@ -21,8 +23,10 @@ score = 0
 choose = input("you have the choose to gues the capitals of (U.S.A, North America, South America, Europe, Asia, Africa: ")
 if choose =="U.S.A":
     for state, capital in State_capitals.States_Capitals.items():
+       #here was another attempt of doing a closeness thing
         closeness = 0
         length_of_capital= len(capital)
+        #---------------------------------
         #print(length_of_capital)
         user_input = input(f"Enter a capital of {state} or (enter 'done'): ")
         if user_input == capital:
